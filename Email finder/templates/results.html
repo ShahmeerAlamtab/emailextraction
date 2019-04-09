@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<title>Email Extraction</title>
+<h1>Email Extraction</h1>
+<h2>with hunter.io</h2>
+<body>
+<table id="result">
+  <tr>
+    <th>Email</th>
+    <th>Score</th>
+  </tr>
+{%for i in range(0, 54)%} 
+{% if email[i]!=None %}
+    <tr>
+    <td>{{email[i]}}</td>
+    <td>{{score[i]}}</td>
+  </tr>
+{%endif%}
+{%endfor%} 
+</table>
+</body>
+</html>

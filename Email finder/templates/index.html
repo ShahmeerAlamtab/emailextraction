@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<title>Email Extraction</title>
+<div id = "space"></div>
+
+<h1>Email Extraction</h1>
+<h2>with hunter.io</h2>
+<form action = "uploader" method = "POST" enctype = "multipart/form-data">
+  <div class="input-file-container">  
+    <input class="input-file" id="my-file" type="file" name = "file">
+    <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
+  </div>
+   <p class="file-return"></p> 
+   <input value = "Extract" type = "submit"/>
+</form>
+<p class="txtcenter">Upload a CSV with company name, first name and last name as headers.<br />
+    Generates a list of emails and a corresponding score. </p>
+<script src ="{{ url_for('static', filename='script.js') }}"></script>
+
+</html>
